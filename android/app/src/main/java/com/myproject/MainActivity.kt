@@ -2,8 +2,8 @@ package com.myproject
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
-import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
 import com.facebook.react.defaults.DefaultReactActivityDelegate
+import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
 
 class MainActivity : ReactActivity() {
 
@@ -14,8 +14,9 @@ class MainActivity : ReactActivity() {
   override fun getMainComponentName(): String = "MyProject"
 
   /**
-   * Returns the instance of the [ReactActivityDelegate]. We use [DefaultReactActivityDelegate]
-   * which allows you to enable New Architecture with a single boolean flags [fabricEnabled]
+   * Returns the instance of [ReactActivityDelegate] used to manage the React application.
+   * We use [DefaultReactActivityDelegate] which allows you to enable New Architecture with a single
+   * boolean flag [fabricEnabled].
    */
   override fun createReactActivityDelegate(): ReactActivityDelegate =
       DefaultReactActivityDelegate(this, mainComponentName, fabricEnabled)
